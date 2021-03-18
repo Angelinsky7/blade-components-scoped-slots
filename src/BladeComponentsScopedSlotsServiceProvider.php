@@ -40,7 +40,7 @@ class BladeComponentsScopedSlotsServiceProvider extends ServiceProvider
         });
 
         Blade::precompiler(function ($value) {
-            $value = preg_replace_callback('/<\s*x[\-\:]scoped-slot\s+(:?)name=(?<name>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+))\s*(context=(?<context>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+))\s*>/', function ($matches) {
+            $value = preg_replace_callback('/<\s*x[\-\:]scoped-slot\s+(:?)name=(?<name>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+))\s*context=(?<context>(\"[^\"]+\"|\\\'[^\\\']+\\\'|[^\s>]+))\s*>/', function ($matches) {
                 $name = $this->stripQuotes($matches['name']);
                 $context = $this->stripQuotes($matches['context']);
 
