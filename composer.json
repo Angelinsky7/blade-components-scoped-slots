@@ -11,7 +11,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "illuminate/support": "8"
+    },
     "autoload": {
         "psr-4": {
             "KonradKalemba\\BladeComponentsScopedSlots\\": "src/"
