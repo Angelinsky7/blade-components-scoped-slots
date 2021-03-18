@@ -45,6 +45,8 @@ or
 
 *components/list.blade.php*
 ```php
+@props(['objects'])
+
 <ul>
     @foreach($objects as $object)
         {{ $item($object) }}
