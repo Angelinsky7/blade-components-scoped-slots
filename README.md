@@ -27,6 +27,22 @@ composer require konradkalemba/blade-components-scoped-slots
 @endcomponent
 ```
 
+or
+
+*index.blade.php*
+```php
+<x-component-list :objects="$objects">
+    <w-scoped-slot name="item" context="$object">
+         <li>
+            {{ $object->name }} 
+            @if($object->isEditable)
+                <a href="{{ route('objects.edit', $object->id) }}">{{ __('Edit') }}</a>
+            @endif
+        </li>
+    </w-scoped-slot>
+</x-component-list>
+```
+
 *components/list.blade.php*
 ```php
 <ul>
